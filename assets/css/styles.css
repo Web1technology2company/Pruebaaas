@@ -20,8 +20,7 @@
 }
 
 .nav ul li{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .nav ul li a{
@@ -32,8 +31,9 @@
 
 .nav ul li a:hover{
     color: #fff;
-    padding: 1px;
     border-bottom: 2px solid #fff;
+    background: #8a4a15;
+    padding: 10px;
 }
 
 .logo, .store{
@@ -56,6 +56,24 @@
 .logo-img img:hover{
     transform: rotateZ(-360deg);
 }
+
+@media screen and (max-width:424px) {
+    .nav{
+        text-align: center;
+        width: 100%;
+        line-height: 2px;
+        justify-content: center;
+    }
+
+    header{
+        height: 15vh;
+    }
+
+    .top{
+        padding-top: 15vh;
+    }
+}
+
 
 /* FOOTER */
 
