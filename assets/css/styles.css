@@ -32,8 +32,7 @@
 
 .nav ul li a:hover{
     color: #fff;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 1px;
     border-bottom: 2px solid #fff;
 }
 
