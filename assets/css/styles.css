@@ -1,17 +1,79 @@
+.contenedor {
+    height: 860px;
+    background: #f66b0f;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:1024px) {
+    .contenedor {
+        height: 730px;
+    }
+}
+
+.content {
+    font-family: Arial;
+    text-align: center;
+    font-size: 2em;
+    color:white ;
+  }
+
+  .content p{
+    font-size: 18px;
+  }
+
+  .waves {
+    position: absolute;
+    bottom: -135px;
+    height: 527px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .wave {
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    width: 2402px;
+    height: 427px;
+    background: url(https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+  }
+  .wave.a {
+    background-position: 0 -854px;
+  }
+  .wave.b {
+    background-position: 0 -427px;
+    animation-delay: .6s;
+  }
+  .wave.c {
+    background-position: 0 0;
+    animation-delay: 1.2s;
+  }
+  @keyframes wave {
+    0% {
+      transform: translate(0 , 0);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+
 .header{
     position: sticky;
     top: 0;
 }
+
 .nav{
     display: flex;
-
-
+    align-items: center;
     justify-content: space-between;
-    background: #b35e19;
+    background: #F68F4C;
     color: #fff;
-
-
-    padding-top: 20px;
 }
 
 .nav ul{
@@ -32,17 +94,17 @@
 .nav ul li a:hover{
     color: #fff;
     border-bottom: 2px solid #fff;
-    background: #8a4a15;
+    background: #b96520;
     padding: 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
-.logo, .store{
+.home, .store{
     font-size: 25px;
 }
 
 .logo-img{
     padding: 25px;
-    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/descarga.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -53,26 +115,27 @@
     transition: all 500ms ease;
 }
 
-.logo-img img:hover{
-    transform: rotateZ(-360deg);
-}
-
-@media screen and (max-width:424px) {
+@media screen and (max-width:524px) {
+    .contenedor {
+        height: 789px;
+    }
     .nav{
         text-align: center;
         width: 100%;
         line-height: 2px;
         justify-content: center;
+        padding-top: 10px;
     }
 
-    header{
-        height: 15vh;
+    .home, .store{
+        font-size: 15px;
     }
 
-    .top{
-        padding-top: 15vh;
+    .nav ul li a:hover{
+        padding: 5px;
     }
 }
+
 
 
 /* FOOTER */
@@ -91,7 +154,7 @@
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 50px;
     padding: 45px 0px;
 }
@@ -107,11 +170,10 @@
 .pie-pagina .grupo-1 .box figure img{
     width: 200px;
     transition: all 0.5s ease;
+    border-radius: 100px;
 } 
 
-.pie-pagina .grupo-1 .box figure img:hover{
-    transform: scale(0.9);
-}
+
 
 .pie-pagina .grupo-1 .box h2{
     color: #000;
@@ -167,4 +229,19 @@
 
 .scrol{
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
+
+
+.instagram-web{
+    border: 2px solid #b35e19;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:1024px) {
+    .instagram-web{
+        height: 370px;
+        width: 300px;
+    }
+}
+
